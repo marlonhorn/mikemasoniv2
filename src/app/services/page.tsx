@@ -1,18 +1,15 @@
-import { About } from "@/components/about";
-import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { Services } from "@/components/services";
 
-export default function AboutContactPage() {
+export default function ServicesPage() {
   return (
     <div className="bg-black text-white">
       <Navbar />
       <main className="pt-20">
-        <About />
-        <Contact />
+        <Services />
       </main>
       <Footer />
     </div>
   );
 }
-

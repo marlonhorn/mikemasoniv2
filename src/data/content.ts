@@ -1,36 +1,21 @@
-export type GalleryCategory = "all" | "editorial" | "portrait" | "cinematic" | "events";
-
-export type GalleryItem = {
+export type FeaturedCategory = {
   id: number;
-  title: string;
-  category: Exclude<GalleryCategory, "all">;
+  title: "CELEBS" | "STILLS" | "FASHION" | "EMOTION";
   image: string;
-  colSpan?: string;
 };
 
 export const navLinks = [
-  { label: "Portfolio", href: "/#portfolio" },
-  { label: "Services", href: "/#services" },
-  { label: "About + Contact", href: "/about-contact" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
-export const galleryFilters: { label: string; value: GalleryCategory }[] = [
-  { label: "All", value: "all" },
-  { label: "Editorial", value: "editorial" },
-  { label: "Portrait", value: "portrait" },
-  { label: "Cinematic", value: "cinematic" },
-  { label: "Events", value: "events" },
-];
-
-export const galleryItems: GalleryItem[] = [
-  { id: 1, title: "Midnight Frame", category: "editorial", image: "/media/gallery-01.svg", colSpan: "md:col-span-2" },
-  { id: 2, title: "Analog Silence", category: "portrait", image: "/media/gallery-02.svg" },
-  { id: 3, title: "Noir Motion", category: "cinematic", image: "/media/gallery-03.svg" },
-  { id: 4, title: "House Lights", category: "events", image: "/media/gallery-04.svg", colSpan: "md:col-span-2" },
-  { id: 5, title: "Soft Exposure", category: "portrait", image: "/media/gallery-05.svg" },
-  { id: 6, title: "Street Ballet", category: "editorial", image: "/media/gallery-06.svg" },
-  { id: 7, title: "Signal Cut", category: "cinematic", image: "/media/gallery-07.svg", colSpan: "md:col-span-2" },
-  { id: 8, title: "Afterglow", category: "events", image: "/media/gallery-08.svg" },
+export const featuredCategories: FeaturedCategory[] = [
+  { id: 1, title: "CELEBS", image: "/media/CELEBS1.jpg" },
+  { id: 2, title: "STILLS", image: "/media/mikemasoniSTILLS1.jpg" },
+  { id: 3, title: "FASHION", image: "/media/FASHION1aa.jpg" },
+  { id: 4, title: "EMOTION", image: "/media/EMOTION1.jpg" },
 ];
 
 export const services = [
