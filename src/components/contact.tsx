@@ -1,18 +1,6 @@
-"use client";
-
 import { Reveal } from "@/components/reveal";
 
 export function Contact() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const name = String(formData.get("name") ?? "");
-    const email = String(formData.get("email") ?? "");
-    const message = String(formData.get("message") ?? "");
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nProject details:\n${message}`);
-    window.location.href = `mailto:hello@mikemasoni.com?subject=Portfolio inquiry from ${encodeURIComponent(name || "Website visitor")}&body=${body}`;
-  };
-
   return (
     <section id="contact" className="px-6 py-24 lg:px-12">
       <Reveal className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
@@ -29,13 +17,10 @@ export function Contact() {
           </div>
         </div>
 
-        <form className="grid gap-4 rounded-md border border-white/15 bg-white/[0.02] p-7" onSubmit={handleSubmit}>
-          <label htmlFor="contact-name" className="sr-only">Name</label>
-          <input id="contact-name" className="border-b border-white/20 bg-transparent px-1 py-3 text-white outline-none placeholder:text-white/40" placeholder="Name" name="name" required />
-          <label htmlFor="contact-email" className="sr-only">Email</label>
-          <input id="contact-email" className="border-b border-white/20 bg-transparent px-1 py-3 text-white outline-none placeholder:text-white/40" placeholder="Email" name="email" type="email" required />
-          <label htmlFor="contact-message" className="sr-only">Project details</label>
-          <textarea id="contact-message" className="min-h-28 border-b border-white/20 bg-transparent px-1 py-3 text-white outline-none placeholder:text-white/40" placeholder="Project details" name="message" required />
+        <form className="grid gap-4 rounded-md border border-white/15 bg-white/[0.02] p-7">
+          <input className="border-b border-white/20 bg-transparent px-1 py-3 text-white outline-none placeholder:text-white/40" placeholder="Name" aria-label="Name" />
+          <input className="border-b border-white/20 bg-transparent px-1 py-3 text-white outline-none placeholder:text-white/40" placeholder="Email" aria-label="Email" type="email" />
+          <textarea className="min-h-28 border-b border-white/20 bg-transparent px-1 py-3 text-white outline-none placeholder:text-white/40" placeholder="Project details" aria-label="Project details" />
           <button type="submit" className="mt-3 w-fit rounded-full border border-white px-5 py-2 text-xs tracking-[0.28em] text-white uppercase transition hover:bg-white hover:text-black">
             Send Inquiry
           </button>

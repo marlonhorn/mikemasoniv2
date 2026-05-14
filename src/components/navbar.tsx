@@ -1,32 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import { navLinks } from "@/data/content";
-
-const NAVBAR_SCROLL_Y_THRESHOLD = 24;
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const ticking = useRef(false);
-  const lastState = useRef(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      if (ticking.current) return;
-      ticking.current = true;
-
-      window.requestAnimationFrame(() => {
-        const nextState = window.scrollY > NAVBAR_SCROLL_Y_THRESHOLD;
-        if (nextState !== lastState.current) {
-          lastState.current = nextState;
-          setScrolled(nextState);
-        }
-        ticking.current = false;
-      });
-    };
-
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -40,18 +22,18 @@ export function Navbar() {
         }`}
       >
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
-          <Link href="/" className="text-xs tracking-[0.35em] text-white uppercase">
+          <a href="#home" className="text-xs tracking-[0.35em] text-white uppercase">
             Mike Masoni
-          </Link>
+          </a>
           <nav className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className="text-xs tracking-[0.3em] text-white/70 uppercase transition hover:text-white"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </nav>
           <button
@@ -81,14 +63,14 @@ export function Navbar() {
         </div>
         <nav className="flex flex-col gap-7">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
               className="text-2xl font-light tracking-wide text-white"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
       </div>
