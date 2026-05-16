@@ -7,7 +7,7 @@ import { Reveal } from "@/components/reveal";
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="mx-auto max-w-7xl px-6 py-24 lg:px-12">
+    <section id="portfolio" className="px-[10vw] py-24">
       <Reveal>
         <div className="mb-12">
           <div>

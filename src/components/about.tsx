@@ -3,8 +3,8 @@ import { Reveal } from "@/components/reveal";
 
 export function About() {
   return (
-    <section id="about" className="px-6 py-24 lg:px-12">
-      <Reveal className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
+    <section id="about" className="px-[10vw] py-24">
+      <Reveal className="grid gap-12 lg:grid-cols-2 lg:items-center">
         <div className="relative h-[460px] overflow-hidden rounded-md border border-white/10">
           <Image src="/media/about.svg" alt="Mike Masoni portrait" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
         </div>

@@ -3,7 +3,7 @@ import { services } from "@/data/content";
 
 export function Services() {
   return (
-    <section id="services" className="px-6 py-24 lg:px-12">
+    <section id="services" className="px-[10vw] py-24">
       <Reveal className="mx-auto max-w-7xl">
         <p className="mb-4 text-xs tracking-[0.35em] text-white/60 uppercase">Services</p>
         <h2 className="mb-10 max-w-2xl text-3xl font-light text-white md:text-5xl">Creative services for brands, publications, and personal stories.</h2>

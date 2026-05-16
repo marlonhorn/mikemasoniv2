@@ -26,7 +26,7 @@ export function Navbar() {
           scrolled ? "border-b border-white/10 bg-black/70 backdrop-blur-xl" : "bg-transparent"
         }`}
       >
-        <div className="mx-auto grid h-20 max-w-7xl grid-cols-[1fr_auto] items-center px-6 lg:px-12">
+        <div className="grid h-20 grid-cols-[1fr_auto] items-center px-[10vw]">
           {pathname === "/" ? (
             <a href="#home" className="text-xs tracking-[0.35em] text-white uppercase">
               Mike Masoni
@@ -65,7 +65,7 @@ export function Navbar() {
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <div className="mx-auto flex h-full max-w-7xl flex-col px-6 lg:px-12">
+        <div className="flex h-full flex-col px-[10vw]">
           <div className="mb-14 flex items-center justify-between">
             {pathname === "/" ? (
               <a href="#home" className="text-xs tracking-[0.35em] text-white uppercase">

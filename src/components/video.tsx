@@ -2,7 +2,7 @@ import { Reveal } from "./reveal";
 
 export function Video() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12">
+    <section className="px-[10vw] py-24">
       <Reveal>
         <div className="space-y-8">
           <div className="space-y-4">

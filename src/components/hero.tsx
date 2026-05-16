@@ -2,7 +2,7 @@ import { Reveal } from "@/components/reveal";
 
 export function Hero() {
   return (
-    <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 lg:px-12">
+    <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden px-[10vw]">
       <div className="absolute inset-0 bg-[url('/media/hero.svg')] bg-cover bg-center" />
       <div className="absolute inset-0 bg-black/35" />
       <Reveal className="relative z-10 text-center text-white">
