@@ -1,7 +1,8 @@
-export type FeaturedCategory = {
+export type Category = {
   id: number;
-  title: "CELEBS" | "STILLS" | "FASHION" | "EMOTION";
-  image: string;
+  title: string;
+  coverImage: string;
+  images: string[];
 };
 
 export const navLinks = [
@@ -11,11 +12,71 @@ export const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const featuredCategories: FeaturedCategory[] = [
-  { id: 1, title: "CELEBS", image: "/media/CELEBS1.jpg" },
-  { id: 2, title: "STILLS", image: "/media/mikemasoniSTILLS1.jpg" },
-  { id: 3, title: "FASHION", image: "/media/FASHION1aa.jpg" },
-  { id: 4, title: "EMOTION", image: "/media/EMOTION1.jpg" },
+export const categories: Category[] = [
+  {
+    id: 1,
+    title: "FASHION",
+    coverImage: "/media/FASHION1aa.jpg",
+    images: [
+      "/media/fashionw1.jpg",
+      "/media/fashionw2.jpg",
+      "/media/fashionw5 (1).jpg",
+      "/media/fash1.jpg",
+      "/media/fash2.jpg",
+      "/media/fash3.jpg",
+      "/media/fash4.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "POWER",
+    coverImage: "/media/EMOTION1.jpg",
+    images: [
+      "/media/pow10.jpg",
+      "/media/pow11.jpg",
+      "/media/pow12.jpg",
+    ],
+  },
+  {
+    id: 3,
+    title: "CELEBS",
+    coverImage: "/media/CELEBS1.jpg",
+    images: [
+      "/media/celeb1.jpg",
+      "/media/celeb2.jpg",
+      "/media/celeb3.jpg",
+      "/media/celeb4.jpg",
+      "/media/celeb5.jpg",
+      "/media/celeb6.jpg",
+      "/media/celeb7.jpg",
+      "/media/celeb8.jpg",
+      "/media/celeb9.jpg",
+      "/media/celeb10.jpg",
+      "/media/celeb11.jpg",
+      "/media/celeb12.jpg",
+      "/media/celeb13.jpg",
+      "/media/celeb14.jpg",
+      "/media/celeb15.jpg",
+      "/media/celeb16.jpg",
+    ],
+  },
+  {
+    id: 4,
+    title: "STILLS",
+    coverImage: "/media/mikemasoniSTILLS1.jpg",
+    images: [
+      "/media/still7.jpg",
+      "/media/still8.jpg",
+      "/media/still9.jpg",
+      "/media/still10.jpg",
+      "/media/still11.jpg",
+      "/media/still12.jpg",
+      "/media/still13.jpg",
+      "/media/still14.jpg",
+      "/media/still15.jpg",
+      "/media/still16.jpg",
+    ],
+  },
 ];
 
 export const services = [

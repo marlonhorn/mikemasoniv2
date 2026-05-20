@@ -6,10 +6,16 @@ export function Video() {
       <Reveal>
         <div className="space-y-8">
           <div className="space-y-4">
-            <h2 className="text-2xl font-light tracking-[0.35em] md:text-4xl">
+            <h2
+              className="text-2xl tracking-[0.35em] md:text-4xl"
+              style={{ fontFamily: '"Arial Black", Arial, sans-serif', fontWeight: 900 }}
+            >
               Featured Work
             </h2>
-            <p className="text-sm font-light tracking-[0.2em] text-white/70">
+            <p
+              className="text-sm tracking-[0.2em] text-white/70"
+              style={{ fontFamily: '"Arial Black", Arial, sans-serif', fontWeight: 900 }}
+            >
               Recent video production
             </p>
           </div>
