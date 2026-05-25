@@ -8,7 +8,6 @@ export type Category = {
 export const navLinks = [
   { label: "Portfolio", href: "#portfolio" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -18,13 +17,17 @@ export const categories: Category[] = [
     title: "FASHION",
     coverImage: "/media/FASHION1aa.jpg",
     images: [
-      "/media/fashionw1.jpg",
-      "/media/fashionw2.jpg",
-      "/media/fashionw5 (1).jpg",
-      "/media/fash1.jpg",
-      "/media/fash2.jpg",
+      "/media/fash2 (1).jpg",
       "/media/fash3.jpg",
       "/media/fash4.jpg",
+      "/media/fash5.jpg",
+      "/media/fash6.jpg",
+      "/media/fash7.jpg",
+      "/media/fash8.jpg",
+      "/media/fash9 (1).jpg",
+      "/media/fash10.jpg",
+      "/media/fash11.jpg",
+      "/media/fash12.jpg",
     ],
   },
   {

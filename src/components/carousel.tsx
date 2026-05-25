@@ -57,7 +57,7 @@ export function Carousel({ title, images, initialIndex = 0, onClose }: Props) {
 
       {/* Main image — click black area to close */}
       <div
-        className="relative flex-1 cursor-pointer overflow-hidden"
+        className="relative flex-1 w-full cursor-pointer overflow-hidden"
         onClick={onClose}
         onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
         onTouchEnd={(e) => {

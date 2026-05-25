@@ -43,8 +43,8 @@ function CategoryCard({
       onClick={() => onOpen(current)}
       className="group block w-full cursor-pointer"
     >
-      <article className="relative overflow-hidden rounded-md border border-white/10 bg-black transition-all duration-300 group-hover:border-white/30 group-hover:shadow-lg group-hover:shadow-white/10">
-        <div className="relative h-[76vh] min-h-[560px] w-full md:h-[84vh]">
+      <article className="relative overflow-hidden bg-black">
+        <div className="relative h-screen w-full">
           <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.04]">
             {category.images.map((src, i) => (
               <Image
@@ -62,8 +62,12 @@ function CategoryCard({
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-center">
             <span
-              className="text-2xl tracking-[0.4em] text-white uppercase md:text-4xl"
-              style={{ fontFamily: '"Arial Black", Arial, sans-serif', fontWeight: 900 }}
+              className="text-2xl tracking-[0.4em] text-white uppercase md:text-4xl transition-opacity duration-700"
+              style={{
+                fontFamily: '"Arial Black", Arial, sans-serif',
+                fontWeight: 900,
+                opacity: current === 0 ? 1 : 0,
+              }}
             >
               {category.title}
             </span>
@@ -79,15 +83,16 @@ export function Portfolio() {
 
   return (
     <>
-      <section id="portfolio" className="px-[10vw] py-24">
+      <section id="portfolio">
         <Reveal>
-          <div className="space-y-8">
+          <div>
             {categories.map((category, i) => (
-              <CategoryCard
-                key={category.id}
-                category={category}
-                onOpen={(imgIdx) => setActive({ catIdx: i, imgIdx })}
-              />
+              <div key={category.id} id={category.title.toLowerCase()}>
+                <CategoryCard
+                  category={category}
+                  onOpen={(imgIdx) => setActive({ catIdx: i, imgIdx })}
+                />
+              </div>
             ))}
           </div>
         </Reveal>
