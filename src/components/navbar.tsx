@@ -15,12 +15,11 @@ export function Navbar() {
   const base = pathname === "/" ? "" : "/";
 
   const menuLinks = [
-    { label: "Fashion",  href: `${base}#fashion`,  delay: 60 },
-    { label: "Power",    href: `${base}#power`,    delay: 120 },
-    { label: "Celebs",   href: `${base}#celebs`,   delay: 180 },
-    { label: "Stills",   href: `${base}#stills`,   delay: 240 },
-    { label: "About",    href: "/about",            delay: 320 },
-    { label: "Contact",  href: "/contact",          delay: 380 },
+    { label: "Lifestyle", href: `${base}#lifestyle`, delay: 60 },
+    { label: "Celebs",   href: `${base}#celebs`,   delay: 120 },
+    { label: "Stills",   href: `${base}#stills`,   delay: 180 },
+    { label: "About",    href: "/about",            delay: 260 },
+    { label: "Contact",  href: "/contact",          delay: 320 },
   ];
 
   useEffect(() => {

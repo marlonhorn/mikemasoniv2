@@ -45,7 +45,7 @@ function CategoryCard({
     >
       <article className="relative overflow-hidden bg-black">
         <div className="relative h-screen w-full">
-          <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.04]">
+          <div className="absolute inset-0">
             {category.images.map((src, i) => (
               <Image
                 key={src}
@@ -59,7 +59,7 @@ function CategoryCard({
               />
             ))}
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent transition-opacity duration-300 group-hover:opacity-60" />
           <div className="absolute inset-0 flex items-center justify-center">
             <span
               className="text-2xl tracking-[0.4em] text-white uppercase md:text-4xl transition-opacity duration-700"

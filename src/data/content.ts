@@ -11,28 +11,25 @@ export const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+export const heroImages: string[] = [
+  "/media/fash1.jpg",
+  "/media/fash2 (1).jpg",
+  "/media/fash3.jpg",
+  "/media/fash4.jpg",
+  "/media/fash5.jpg",
+  "/media/fash6.jpg",
+  "/media/fash7.jpg",
+  "/media/fash8.jpg",
+  "/media/fash9 (1).jpg",
+  "/media/fash10.jpg",
+  "/media/fash11.jpg",
+  "/media/fash12.jpg",
+];
+
 export const categories: Category[] = [
   {
-    id: 1,
-    title: "FASHION",
-    coverImage: "/media/FASHION1aa.jpg",
-    images: [
-      "/media/fash2 (1).jpg",
-      "/media/fash3.jpg",
-      "/media/fash4.jpg",
-      "/media/fash5.jpg",
-      "/media/fash6.jpg",
-      "/media/fash7.jpg",
-      "/media/fash8.jpg",
-      "/media/fash9 (1).jpg",
-      "/media/fash10.jpg",
-      "/media/fash11.jpg",
-      "/media/fash12.jpg",
-    ],
-  },
-  {
     id: 2,
-    title: "POWER",
+    title: "LIFESTYLE",
     coverImage: "/media/EMOTION1.jpg",
     images: [
       "/media/pow1.jpg",

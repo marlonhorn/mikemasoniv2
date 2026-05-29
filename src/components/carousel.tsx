@@ -38,26 +38,30 @@ export function Carousel({ title, images, initialIndex = 0, onClose }: Props) {
   }, [onClose, prev, next]);
 
   return (
-    <div className="fixed inset-0 z-[100] flex flex-col bg-black">
-      {/* Header */}
-      <div className="flex h-14 shrink-0 items-center justify-between border-b border-white/10 px-[10vw]">
+    <div className="fixed inset-0 z-[100] bg-black">
+      {/* Top scrim — ensures header is readable over bright images */}
+      <div className="absolute inset-x-0 top-0 z-[9] h-28 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
+
+      {/* Floating header — no bar */}
+      <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-5 py-6">
         <span
-          className="text-sm tracking-[0.4em] text-white uppercase"
+          className="text-xs tracking-[0.35em] text-white uppercase"
           style={{ fontFamily: '"Arial Black", Arial, sans-serif', fontWeight: 900 }}
         >
           {title}
         </span>
         <button
           onClick={onClose}
-          className="text-xs tracking-[0.35em] text-white/50 uppercase transition-colors hover:text-white"
+          className="text-2xl leading-none text-white/70 transition-all hover:text-white hover:scale-110 active:scale-95"
+          aria-label="Schließen"
         >
-          Close
+          ✕
         </button>
       </div>
 
-      {/* Main image — click black area to close */}
+      {/* Main image — click to close */}
       <div
-        className="relative flex-1 w-full cursor-pointer overflow-hidden"
+        className="relative h-full w-full cursor-pointer overflow-hidden"
         onClick={onClose}
         onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
         onTouchEnd={(e) => {
@@ -73,36 +77,37 @@ export function Carousel({ title, images, initialIndex = 0, onClose }: Props) {
           fill
           sizes="100vw"
           priority
-          className="pointer-events-none object-contain"
+          className="pointer-events-none object-cover"
         />
 
         {images.length > 1 && (
           <>
             <button
               onClick={(e) => { e.stopPropagation(); prev(); }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 p-4 text-2xl text-white/40 transition-colors hover:text-white"
+              className="absolute left-4 top-1/2 -translate-y-1/2 p-4 text-white/30 transition-colors hover:text-white"
               aria-label="Vorheriges Bild"
             >
-              ←
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.2">
+                <polyline points="13,3 6,10 13,17" />
+              </svg>
             </button>
             <button
               onClick={(e) => { e.stopPropagation(); next(); }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 p-4 text-2xl text-white/40 transition-colors hover:text-white"
+              className="absolute right-4 top-1/2 -translate-y-1/2 p-4 text-white/30 transition-colors hover:text-white"
               aria-label="Nächstes Bild"
             >
-              →
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.2">
+                <polyline points="7,3 14,10 7,17" />
+              </svg>
             </button>
           </>
         )}
 
-        <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] text-white/35">
-          {String(current + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
-        </p>
       </div>
 
-      {/* Thumbnails */}
+      {/* Thumbnails — floating over image */}
       {images.length > 1 && (
-        <div className="flex shrink-0 gap-2 overflow-x-auto border-t border-white/10 px-[10vw] py-4">
+        <div className="absolute inset-x-0 bottom-0 z-10 flex justify-center gap-2 overflow-x-auto px-5 py-4">
           {images.map((src, i) => (
             <button
               key={i}
