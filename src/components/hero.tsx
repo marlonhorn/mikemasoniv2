@@ -9,6 +9,13 @@ export function Hero() {
   const [current, setCurrent] = useState(0);
   const [carouselOpen, setCarouselOpen] = useState(false);
 
+  const objectPositions: Record<number, string> = {
+    0: "center bottom",
+    7: "center top",
+    9: "center top",
+    11: "center bottom",
+  };
+
   useEffect(() => {
     const id = setInterval(
       () => setCurrent((i) => (i + 1) % heroImages.length),
@@ -33,13 +40,14 @@ export function Hero() {
               fill
               sizes="100vw"
               priority={i === 0}
-              className={`object-cover object-center transition-opacity duration-[1400ms] ease-in-out ${
+              className={`object-cover transition-opacity duration-[1400ms] ease-in-out ${
                 i === current ? "opacity-100" : "opacity-0"
               }`}
+              style={{ objectPosition: objectPositions[i] ?? "center" }}
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 hover:bg-black/55" />
+        <div className="absolute inset-0 bg-black/40" />
 
         {/* Slide 1: name + subtitle */}
         <div className={`absolute z-10 px-[10vw] text-center transition-opacity duration-[1000ms] ${current === 0 ? "opacity-100" : "opacity-0"}`}>
@@ -74,6 +82,7 @@ export function Hero() {
           images={heroImages}
           initialIndex={current}
           onClose={() => setCarouselOpen(false)}
+          objectPositions={objectPositions}
         />
       )}
     </>

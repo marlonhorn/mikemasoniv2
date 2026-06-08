@@ -132,11 +132,11 @@ export function Navbar() {
           {/* Right column — image (hidden on mobile) */}
           <div className="relative hidden flex-1 md:block">
             <Image
-              src="/media/FASHION1aa.jpg"
+              src="/media/fash1.jpg"
               alt="Mike Masoni"
               fill
               sizes="50vw"
-              className="object-cover object-center"
+              className="object-cover object-[77%_center]"
               priority
             />
           </div>

@@ -53,9 +53,12 @@ function CategoryCard({
                 alt={category.title}
                 fill
                 sizes="100vw"
-                className={`object-cover object-center transition-opacity duration-[1400ms] ease-in-out ${
+                className={`object-cover transition-opacity duration-[1400ms] ease-in-out ${
                   i === current ? "opacity-90" : "opacity-0"
                 }`}
+                style={{
+                  objectPosition: category.objectPositions?.[i] ?? "center",
+                }}
               />
             ))}
           </div>
@@ -104,6 +107,8 @@ export function Portfolio() {
           images={categories[active.catIdx].images}
           initialIndex={active.imgIdx}
           onClose={() => setActive(null)}
+          objectPositions={categories[active.catIdx].objectPositions}
+          objectFits={categories[active.catIdx].objectFits}
         />
       )}
     </>

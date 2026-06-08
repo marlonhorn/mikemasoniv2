@@ -8,9 +8,11 @@ type Props = {
   images: string[];
   initialIndex?: number;
   onClose: () => void;
+  objectPositions?: Record<number, string>;
+  objectFits?: Record<number, string>;
 };
 
-export function Carousel({ title, images, initialIndex = 0, onClose }: Props) {
+export function Carousel({ title, images, initialIndex = 0, onClose, objectPositions = {}, objectFits = {} }: Props) {
   const [current, setCurrent] = useState(initialIndex);
   const touchStartX = useRef<number>(0);
 
@@ -78,6 +80,10 @@ export function Carousel({ title, images, initialIndex = 0, onClose }: Props) {
           sizes="100vw"
           priority
           className="pointer-events-none object-cover"
+          style={{
+            objectPosition: objectPositions[current] ?? "center",
+            objectFit: (objectFits[current] ?? "cover") as "cover" | "contain",
+          }}
         />
 
         {images.length > 1 && (
