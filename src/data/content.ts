@@ -26,6 +26,8 @@ export const heroImages: string[] = [
   "/media/fash10w.jpg",
   "/media/fash11w.jpg",
   "/media/fash12ww.jpg",
+  "/media/fash13ww.jpg",
+  "/media/fash14ww.jpg",
 ];
 
 export const categories: Category[] = [
@@ -37,14 +39,15 @@ export const categories: Category[] = [
       "/media/pow1w.jpg",
       "/media/pow2ww.jpg",
       "/media/pow3ww.jpg",
+      "/media/pow4w.jpg",
       "/media/poww4w.jpg",
+      "/media/pow11w.jpg",
+      "/media/pow10w.jpg",
+       "/media/pow6w.jpg",
       "/media/pow5w.jpg",
-      "/media/pow6w.jpg",
       "/media/pow7w.jpg",
       "/media/pow8w.jpg",
       "/media/pow9w.jpg",
-      "/media/pow10w.jpg",
-      "/media/pow11w.jpg",
       "/media/pow12ww.jpg",
     ],
   },
@@ -70,7 +73,9 @@ export const categories: Category[] = [
       "/media/celeb9w.jpg",
       "/media/celeb10w.jpg",
       "/media/celeb11w.jpg",
-      "/media/celeb12w.jpg",
+      "/media/celeb12.jpg",
+      "/media/celeb13w.jpg",
+      "/media/celeb14w.jpg",
     ],
   },
   {
