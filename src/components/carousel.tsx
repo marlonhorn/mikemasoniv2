@@ -79,10 +79,10 @@ export function Carousel({ title, images, initialIndex = 0, onClose, objectPosit
           fill
           sizes="100vw"
           priority
-          className="pointer-events-none object-cover"
+          className={`pointer-events-none ${objectFits[current] ? "" : "object-contain md:object-cover"}`}
           style={{
             objectPosition: objectPositions[current] ?? "center",
-            objectFit: (objectFits[current] ?? "cover") as "cover" | "contain",
+            ...(objectFits[current] ? { objectFit: objectFits[current] as "cover" | "contain" } : {}),
           }}
         />
 

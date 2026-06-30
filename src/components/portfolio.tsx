@@ -44,7 +44,7 @@ function CategoryCard({
       className="group block w-full cursor-pointer"
     >
       <article className="relative overflow-hidden bg-black">
-        <div className="relative h-screen w-full">
+        <div className="relative aspect-video w-full md:aspect-auto md:h-screen">
           <div className="absolute inset-0">
             {category.images.map((src, i) => (
               <Image

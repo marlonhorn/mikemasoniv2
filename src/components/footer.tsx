@@ -5,7 +5,7 @@ const arialBlack = { fontFamily: '"Arial Black", Arial, sans-serif', fontWeight:
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 px-[10vw] py-16">
+    <footer id="contact" className="pink-on-dark border-t border-white/10 px-[10vw] py-16">
       <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
         <p
           className="max-w-none text-[clamp(1.5rem,4vw,3rem)] leading-tight tracking-[0.14em] text-white uppercase"

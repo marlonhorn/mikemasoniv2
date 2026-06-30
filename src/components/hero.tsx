@@ -24,6 +24,12 @@ export function Hero() {
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    const onFashion = () => setCurrent(1);
+    window.addEventListener("hero-fashion", onFashion);
+    return () => window.removeEventListener("hero-fashion", onFashion);
+  }, []);
+
   return (
     <>
       <section

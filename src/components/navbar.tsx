@@ -15,11 +15,12 @@ export function Navbar() {
   const base = pathname === "/" ? "" : "/";
 
   const menuLinks = [
-    { label: "Lifestyle", href: `${base}#lifestyle`, delay: 60 },
-    { label: "Celebs",   href: `${base}#celebs`,   delay: 120 },
-    { label: "Stills",   href: `${base}#stills`,   delay: 180 },
-    { label: "About",    href: "/about",            delay: 260 },
-    { label: "Contact",  href: "/contact",          delay: 320 },
+    { label: "Fashion",  href: `${base}#home`,     delay: 60 },
+    { label: "Lifestyle", href: `${base}#lifestyle`, delay: 120 },
+    { label: "Celebs",   href: `${base}#celebs`,   delay: 180 },
+    { label: "Stills",   href: `${base}#stills`,   delay: 240 },
+    { label: "About",    href: "/about",            delay: 320 },
+    { label: "Contact",  href: "/#contact",         delay: 380 },
   ];
 
   useEffect(() => {
@@ -63,7 +64,7 @@ export function Navbar() {
           </button>
 
           <Link
-            href="/contact"
+            href="/#contact"
             className="text-xs tracking-[0.35em] text-white uppercase transition-all duration-200 hover:opacity-60 active:scale-95"
             style={arialBlack}
           >
@@ -83,7 +84,7 @@ export function Navbar() {
         {/* Two-column layout */}
         <div className="flex h-full">
           {/* Left column — nav links */}
-          <div className="relative flex w-full flex-col bg-black px-[10vw] py-10 md:w-1/2">
+          <div className="pink-on-dark relative flex w-full flex-col bg-black px-[10vw] py-10 md:w-1/2">
             {/* Top bar: logo + close */}
             <div className="mb-16 flex items-center justify-between">
               {pathname === "/" ? (
@@ -111,7 +112,10 @@ export function Navbar() {
                 <Link
                   key={label}
                   href={href}
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false);
+                    if (label === "Fashion") window.dispatchEvent(new Event("hero-fashion"));
+                  }}
                   className="text-3xl tracking-[0.2em] text-white uppercase hover:opacity-50 active:scale-[0.98] md:text-4xl"
                   style={{
                     ...arialBlack,

@@ -10,7 +10,7 @@ export type Category = {
 export const navLinks = [
   { label: "Portfolio", href: "#portfolio" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const heroImages: string[] = [
