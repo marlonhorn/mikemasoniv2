@@ -36,9 +36,7 @@ export function Navbar() {
 
         {/* Logo — centered, fades on scroll */}
         <div
-          className={`pointer-events-none absolute inset-x-0 top-0 flex h-20 items-center justify-center transition-all duration-500 ${
-            scrolled ? "opacity-0" : "opacity-100"
-          }`}
+          className="pointer-events-none absolute inset-x-0 top-0 flex h-20 items-center justify-center"
         >
           {pathname === "/" ? (
             <a href="#home" className="pointer-events-auto text-sm tracking-[0.35em] text-white uppercase transition-opacity hover:opacity-60" style={arialBlack}>
@@ -65,7 +63,7 @@ export function Navbar() {
 
           <Link
             href="/#contact"
-            className="text-xs tracking-[0.35em] text-white uppercase transition-all duration-200 hover:opacity-60 active:scale-95"
+            className="hidden text-xs tracking-[0.35em] text-white uppercase transition-all duration-200 hover:opacity-60 active:scale-95 md:block"
             style={arialBlack}
           >
             Contact

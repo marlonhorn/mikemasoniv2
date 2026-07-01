@@ -76,6 +76,10 @@ export const categories: Category[] = [
       "/media/celeb12.jpg",
       "/media/celeb13w.jpg",
       "/media/celeb14w.jpg",
+      "/media/celeb15w.jpg",
+      "/media/celeb16w.jpg",
+      "/media/celeb17w.jpg",
+      "/media/celeb18w.jpg",
     ],
   },
   {
