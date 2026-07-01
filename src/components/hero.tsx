@@ -34,7 +34,7 @@ export function Hero() {
     <>
       <section
         id="home"
-        className="relative flex min-h-screen cursor-pointer items-center justify-center overflow-hidden"
+        className="relative flex aspect-[4/3] w-full cursor-pointer items-center justify-center overflow-hidden md:aspect-auto md:min-h-screen"
         onClick={() => setCarouselOpen(true)}
       >
         <div className="absolute inset-0">

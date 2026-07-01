@@ -20,9 +20,10 @@ function CategoryCard({
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
     const observer = new IntersectionObserver(
       ([entry]) => setVisible(entry.isIntersecting),
-      { threshold: 0.3 }
+      { threshold: isMobile ? 0.8 : 0.3 }
     );
     observer.observe(node);
     return () => observer.disconnect();
@@ -30,9 +31,10 @@ function CategoryCard({
 
   useEffect(() => {
     if (!visible || category.images.length <= 1) return;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
     const id = setInterval(
       () => setCurrent((i) => (i + 1) % category.images.length),
-      3000
+      isMobile ? 7000 : 3000
     );
     return () => clearInterval(id);
   }, [visible, category.images.length]);
@@ -44,7 +46,7 @@ function CategoryCard({
       className="group block w-full cursor-pointer"
     >
       <article className="relative overflow-hidden bg-black">
-        <div className="relative aspect-video w-full md:aspect-auto md:h-screen">
+        <div className="relative aspect-[4/3] w-full md:aspect-auto md:h-screen">
           <div className="absolute inset-0">
             {category.images.map((src, i) => (
               <Image
