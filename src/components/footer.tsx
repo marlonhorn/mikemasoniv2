@@ -19,7 +19,7 @@ export function Footer() {
           className="mt-6 max-w-3xl text-sm leading-relaxed tracking-[0.2em] text-white/65 uppercase md:text-base"
           style={arialBlack}
         >
-          For photoshoots, directing opportunities, image licensing, press, or general enquiries: contact creative.progress@yahoo.de.
+          For photoshoots, directing opportunities, image licensing, press, or general enquiries: contact creative.progress@yahoo.com.
         </p>
 
         <div
@@ -40,22 +40,17 @@ export function Footer() {
           className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs tracking-[0.35em] text-white/45 uppercase md:text-sm"
           style={arialBlack}
         >
-          <a href="https://youtube.com" target="_blank" rel="noreferrer" className="transition hover:text-white">
+          <a href="https://www.youtube.com/@mikemasoni363" target="_blank" rel="noreferrer" className="transition hover:text-white">
             YouTube
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="transition hover:text-white">
+          <a href="https://www.instagram.com/mikemasoni_official/" target="_blank" rel="noreferrer" className="transition hover:text-white">
             Instagram
           </a>
         </div>
 
-        <div
-          className="mt-10 flex flex-col items-center gap-2 text-[11px] tracking-[0.32em] text-white/35 uppercase sm:flex-row sm:gap-4"
-          style={arialBlack}
-        >
-          <span>© {new Date().getFullYear()} Mike Masoni</span>
-          <span className="hidden sm:block">/</span>
-          <span>Photography / Videography / Direction</span>
-        </div>
+        <p className="mt-10 text-[11px] tracking-[0.32em] text-white/35 uppercase" style={arialBlack}>
+          © Mike Masoni
+        </p>
       </div>
     </footer>
   );

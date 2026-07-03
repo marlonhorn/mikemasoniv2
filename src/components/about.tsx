@@ -9,8 +9,8 @@ const bioImages = [
 export function About() {
   return (
     <section id="about">
-      {bioImages.map((img) => (
-        <div key={img.src} className="relative w-full aspect-[17/10]">
+      {bioImages.map((img, i) => (
+        <div key={img.src} id={i === bioImages.length - 1 ? "reach-out" : undefined} className="relative w-full aspect-[17/10]">
           <Image
             src={img.src}
             alt={img.alt}

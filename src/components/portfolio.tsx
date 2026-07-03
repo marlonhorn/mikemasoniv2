@@ -55,7 +55,7 @@ function CategoryCard({
                 alt={category.title}
                 fill
                 sizes="100vw"
-                className={`object-cover transition-opacity duration-[1400ms] ease-in-out ${
+                className={`object-cover mobile-center transition-opacity duration-[1400ms] ease-in-out ${
                   i === current ? "opacity-90" : "opacity-0"
                 }`}
                 style={{
