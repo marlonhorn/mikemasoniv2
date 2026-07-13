@@ -11,19 +11,17 @@ export function Footer() {
           className="max-w-none text-[clamp(1.5rem,4vw,3rem)] leading-tight tracking-[0.14em] text-white uppercase"
           style={arialBlack}
         >
-          Collaborate with
-          <br />
-          Mike Masoni
+          Work with Mike Masoni
         </p>
         <p
-          className="mt-6 max-w-3xl text-sm leading-relaxed tracking-[0.2em] text-white/65 uppercase md:text-base"
+          className="mt-6 max-w-3xl text-sm leading-relaxed tracking-[0.2em] text-white/90 uppercase md:text-base"
           style={arialBlack}
         >
           For photoshoots, directing opportunities, image licensing, press, or general enquiries: contact creative.progress@yahoo.com.
         </p>
 
         <div
-          className="mt-14 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs tracking-[0.35em] text-white/55 uppercase md:text-sm"
+          className="mt-14 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-base tracking-[0.35em] text-white/80 uppercase md:text-lg"
           style={arialBlack}
         >
           <Link href="/" className="transition hover:text-white">
@@ -37,7 +35,7 @@ export function Footer() {
         </div>
 
         <div
-          className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs tracking-[0.35em] text-white/45 uppercase md:text-sm"
+          className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-base tracking-[0.35em] text-white/80 uppercase md:text-lg"
           style={arialBlack}
         >
           <a href="https://www.youtube.com/@mikemasoni363" target="_blank" rel="noreferrer" className="flex items-center gap-2 transition hover:text-white">
@@ -54,7 +52,7 @@ export function Footer() {
           </a>
         </div>
 
-        <p className="mt-10 text-[11px] tracking-[0.32em] text-white/35 uppercase" style={arialBlack}>
+        <p className="mt-10 text-[11px] tracking-[0.32em] text-white/80 uppercase" style={arialBlack}>
           © Mike Masoni
         </p>
       </div>

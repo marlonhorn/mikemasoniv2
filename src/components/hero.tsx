@@ -64,8 +64,8 @@ export function Hero() {
             MIKE MASONI
           </h1>
           <p
-            className="mt-3 text-xl tracking-[0.25em] text-white uppercase md:mt-5 md:text-6xl"
-            style={{ fontFamily: '"Arial Black", Arial, sans-serif', fontWeight: 900, paddingLeft: '0.25em' }}
+            className="mt-3 text-sm tracking-[0.35em] text-white uppercase md:mt-5"
+            style={{ fontFamily: '"Arial Black", Arial, sans-serif', fontWeight: 900, paddingLeft: '0.35em' }}
           >
             PHOTOGRAPHER &amp; DIRECTOR
           </p>
