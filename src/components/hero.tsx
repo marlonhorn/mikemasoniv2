@@ -58,14 +58,14 @@ export function Hero() {
         {/* Slide 1: name + subtitle */}
         <div className={`absolute inset-x-0 z-10 px-[10vw] text-center transition-opacity duration-[1000ms] ${current === 0 ? "opacity-100" : "opacity-0"}`}>
           <h1
-            className="text-3xl tracking-[0.25em] text-white uppercase md:text-6xl"
+            className="text-xl tracking-[0.25em] text-white uppercase md:text-6xl"
             style={{ fontFamily: '"Arial Black", Arial, sans-serif', fontWeight: 900, paddingLeft: '0.25em' }}
           >
             MIKE MASONI
           </h1>
           <p
-            className="mt-3 text-[10px] tracking-[0.4em] text-white/80 uppercase md:mt-5 md:text-sm"
-            style={{ fontFamily: 'Arial, Helvetica, sans-serif', fontWeight: 400, paddingLeft: '0.4em' }}
+            className="mt-3 text-xl tracking-[0.25em] text-white uppercase md:mt-5 md:text-6xl"
+            style={{ fontFamily: '"Arial Black", Arial, sans-serif', fontWeight: 900, paddingLeft: '0.25em' }}
           >
             PHOTOGRAPHER &amp; DIRECTOR
           </p>

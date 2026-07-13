@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mike Masoni | Photography & Videography",
+  title: "Mike Masoni | Photographer & Director",
   description:
-    "Modern luxury portfolio of Mike Masoni featuring editorial photography, cinematic video, and creative direction.",
+    "Mike Masoni – Photographer & Director. Editorial photography, cinematic video, and creative direction.",
 };
 
 export default function RootLayout({
