@@ -1,4 +1,4 @@
-import { Footer } from "@/components/footer";
+import { About } from "@/components/about";
 import { Hero } from "@/components/hero";
 import { Navbar } from "@/components/navbar";
 import { Portfolio } from "@/components/portfolio";
@@ -12,8 +12,8 @@ export default function Home() {
         <Hero />
         <Portfolio />
         <Video />
+        <About />
       </main>
-      <Footer />
     </div>
   );
 }

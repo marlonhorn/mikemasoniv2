@@ -19,8 +19,8 @@ export function Navbar() {
     { label: "Lifestyle", href: `${base}#lifestyle`, delay: 120 },
     { label: "Celebs",   href: `${base}#celebs`,   delay: 180 },
     { label: "Stills",   href: `${base}#stills`,   delay: 240 },
-    { label: "About",    href: "/about",            delay: 320 },
-    { label: "Contact",  href: "/about#reach-out",         delay: 380 },
+    { label: "About",    href: `${base}#about`,     delay: 320 },
+    { label: "Contact",  href: `${base}#reach-out`, delay: 380 },
   ];
 
   useEffect(() => {
@@ -62,7 +62,7 @@ export function Navbar() {
           </button>
 
           <Link
-            href="/about#reach-out"
+            href={`${base}#reach-out`}
             className="hidden text-xs tracking-[0.35em] text-white uppercase transition-all duration-200 hover:opacity-60 active:scale-95 md:block"
             style={arialBlack}
           >
