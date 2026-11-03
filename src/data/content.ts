@@ -9,8 +9,8 @@ export type Category = {
 
 export const navLinks = [
   { label: "Portfolio", href: "#portfolio" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/about#reach-out" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#reach-out" },
 ];
 
 export const heroImages: string[] = [
@@ -28,6 +28,7 @@ export const heroImages: string[] = [
   "/media/fash12ww.jpg",
   "/media/fash13ww.jpg",
   "/media/fash14ww.jpg",
+  "/media/fash15ww.jpg",
 ];
 
 export const categories: Category[] = [
